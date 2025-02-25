@@ -1,0 +1,35 @@
+{
+  "extracted_data": [
+    {
+      "patient_name": null,
+      "dob": null,
+      "address": null,
+      "email": null,
+      "pharmacy_name": null,
+      "pharmacy_address": null,
+      "blood_pressure": null,
+      "heart_rate": null,
+      "medication_name": null,
+      "strength": null,
+      "repeats": null,
+      "message_id": null,
+      "subject": null,
+      "from": null
+    }
+  ],
+  "missing_fields": [
+    [
+      "patient_name",
+      "dob",
+      "address",
+      "email",
+      "pharmacy_name",
+      "pharmacy_address",
+      "blood_pressure",
+      "heart_rate",
+      "medication_name",
+      "strength",
+      "repeats"
+    ]
+  ]
+}

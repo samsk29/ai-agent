@@ -1,0 +1,25 @@
+parse_and_triage_task:
+  description: >
+    Parse the input email {email_content}, fetch the message ID, subject, and email body, and send these details to intake_validation_task.
+  expected_output: >
+    Email message ID, subject, and email body.
+  agent: email_reader
+
+intake_validation_task:
+  description: >
+    Process the parsed email data (received from the email_reader agent) to extract all required prescription fields.
+    If all required fields are present, save the extracted data to a JSON file.
+    Otherwise, record the missing fields for follow-up.
+  expected_output: >
+    Path to the JSON file containing extracted prescription data and missing fields send it to response_handling_task.
+  agent: intake
+
+response_handling_task:
+  description: >
+    For any records with missing prescription fields in the extracted data, send appropriate email responses to patients
+    requesting the missing information.
+  expected_output: >
+    Status of email responses sent.
+  agent: response
+
+
